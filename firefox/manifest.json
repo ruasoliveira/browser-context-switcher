@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "browser-context-switcher",
+  "version": "0.1",
+
+  "description": "Manages your tabs. It organizes tabs in different \"contexts\", so that you can groups of tabs according to different work/personal uses.",
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "browser_action": {
+    "default_icon": "data/icons/button-32.png",
+    "default_title": "Context Switcher",
+    "default_popup": "popup/debug.html"
+  }
+
+}
+
+//browser.extension.getURL
