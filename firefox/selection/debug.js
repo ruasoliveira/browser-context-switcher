@@ -12,10 +12,19 @@ function displayTabsURLs( l_tabs ) {
       continue;
     }
 
-    s_url_text = o_tab.url;
+    s_url_text = "[Wnd:" + o_tab.windowId + "] " + "[Tab:" + o_tab.id + "] " + "[Idx:" + o_tab.index + "] ";
+
     if (o_tab.pinned) {
       s_url_text = "[pinned] " + s_url_text;
     }
+
+    if (o_tab.isInReaderMode) {
+      s_url_text += "[RM] "
+    }
+
+    s_url_text += "[Url:" + o_tab.url + "] ";
+
+    s_url_text += o_tab.title
 
     var o_item = document.createElement('li');
     o_item.appendChild( document.createTextNode(s_url_text) );
