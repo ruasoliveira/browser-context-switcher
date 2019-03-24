@@ -8,6 +8,10 @@ function displayTabsURLs( l_tabs ) {
   for (let o_tab of l_tabs) {
     console.log(`${o_tab.url}`);
 
+    if (o_tab.incognito) { // skip private browsing tabs
+      continue;
+    }
+
     s_url_text = o_tab.url;
     if (o_tab.pinned) {
       s_url_text = "[pinned] " + s_url_text;
