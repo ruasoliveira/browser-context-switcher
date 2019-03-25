@@ -16,6 +16,9 @@
     "default_popup": "popup/debug.html"
   }
 
+  "background": {
+    "scripts": ["background/tab-checker.js"]
+  }
 }
 
 //browser.extension.getURL
