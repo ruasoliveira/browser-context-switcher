@@ -7,18 +7,20 @@
   "description": "Manages your tabs. It organizes tabs in different \"contexts\", so that you can groups of tabs according to different work/personal uses.",
 
   "permissions": [
-    "tabs"
+    "tabs",
+    "bookmarks"
   ],
 
   "browser_action": {
     "default_icon": "data/icons/button-32.png",
     "default_title": "Context Switcher",
     "default_popup": "popup/debug.html"
-  }
+  },
 
   "background": {
-    "scripts": ["background/tab-checker.js"]
+    "page": "background/tab-checker.html"
   }
 }
 
 //browser.extension.getURL
+//    "scripts": ["background/tab-checker.js"]
